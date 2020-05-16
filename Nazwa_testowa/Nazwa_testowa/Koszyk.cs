@@ -117,6 +117,7 @@ namespace Alledrogo
         private void Cleaning_after_order()
         {
             SaveBill_to_PDF();
+
             DialogResult dialog = MessageBox.Show("Dokonanano zakupu\nRachunek został wyeksportowany do pliku PDF\nChcesz dalej kontynuować zakupy ?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dialog == DialogResult.Yes)
             {
