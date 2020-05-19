@@ -13,6 +13,7 @@ namespace Alledrogo
     {
         static DateTime data_zam = DateTime.Now;
         readonly Random random = new Random();
+        bool Save_success;
 
         public Koszyk()
         {
@@ -117,28 +118,39 @@ namespace Alledrogo
         private void Cleaning_after_order()
         {
             SaveBill_to_PDF();
-
-            DialogResult dialog = MessageBox.Show("Dokonanano zakupu\nRachunek został wyeksportowany do pliku PDF\nChcesz dalej kontynuować zakupy ?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (dialog == DialogResult.Yes)
+            if(Save_success == true)
             {
-                foreach (DataGridViewRow item in DataGridView_koszyk.Rows)
+             DialogResult dialog = MessageBox.Show("Dokonanano zakupu\nRachunek został wyeksportowany do pliku PDF\nChcesz dalej kontynuować zakupy ?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dialog == DialogResult.Yes)
                 {
-                    Global_variable.Change_counter -= (int)item.Cells[2].Value;
-                    Global_variable.Bill -= Convert.ToDouble(item.Cells[3].Value) * (int)item.Cells[2].Value;
-                    textBox_do_zaplaty.Text = Global_variable.Bill.ToString("0.00" + " zl");
+                    foreach (DataGridViewRow item in DataGridView_koszyk.Rows)
+                    {
+                        Global_variable.Change_counter -= (int)item.Cells[2].Value;
+                        Global_variable.Bill -= Convert.ToDouble(item.Cells[3].Value) * (int)item.Cells[2].Value;
+                        textBox_do_zaplaty.Text = Global_variable.Bill.ToString("0.00" + " zl");
+                    }
+                    DataGridView_koszyk.Rows.Clear();
+                    ActiveForm.Close();
                 }
-                DataGridView_koszyk.Rows.Clear();
-                ActiveForm.Close();
+                else
+                {
+                    MessageBox.Show("Dziękujemy za zakupy w naszym sklepie\n                    Do widzenia :)", "Alledrogo", MessageBoxButtons.OK);
+                    Application.Exit();
+                }
             }
-            else
+            if(Save_success == false)
             {
-                MessageBox.Show("Dziękujemy za zakupy w naszym sklepie\n                    Do widzenia :)", "Alledrogo", MessageBoxButtons.OK);
-                Application.Exit();
+                var result = MessageBox.Show("Nie wybrano miejsca zapisu rachunku\nChcesz ponowić próbę ?","Alledrogo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if(result == DialogResult.Yes)
+                {
+                    SaveBill_to_PDF();
+                }
             }
         }
         private void SaveBill_to_PDF()
         {
             SaveFileDialog sfd = new SaveFileDialog();
+            Save_success = false;
             sfd.Filter = "PDF (*.pdf)|*.pdf";
             sfd.FileName = "Bill.pdf";
             bool fileError = false;
@@ -194,6 +206,7 @@ namespace Alledrogo
                             stream.Close();
                         }
                         MessageBox.Show("Zapis pliku zakończył się sukcesem !!!", "Info");
+                        Save_success = true;
                     }
                     catch (Exception ex)
                     {
