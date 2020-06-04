@@ -44,6 +44,11 @@
             this.zNorthwindDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.produktyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.DataGridView_koszyk = new System.Windows.Forms.DataGridView();
+            this.NazwaProduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IloscJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_Ilosc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CenaJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDproduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -51,11 +56,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NazwaProduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IloscJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Ilosc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CenaJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDproduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.zNorthwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produktyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.zNorthwindDataSetBindingSource)).BeginInit();
@@ -98,10 +98,10 @@
             this.button_usun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_usun.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_usun.ForeColor = System.Drawing.Color.White;
-            this.button_usun.Location = new System.Drawing.Point(0, 98);
+            this.button_usun.Location = new System.Drawing.Point(21, 98);
             this.button_usun.Margin = new System.Windows.Forms.Padding(2);
             this.button_usun.Name = "button_usun";
-            this.button_usun.Size = new System.Drawing.Size(220, 36);
+            this.button_usun.Size = new System.Drawing.Size(180, 36);
             this.button_usun.TabIndex = 5;
             this.button_usun.Text = "Usuń";
             this.button_usun.UseVisualStyleBackColor = false;
@@ -125,10 +125,10 @@
             this.button_Kup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Kup.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_Kup.ForeColor = System.Drawing.Color.White;
-            this.button_Kup.Location = new System.Drawing.Point(0, 62);
+            this.button_Kup.Location = new System.Drawing.Point(21, 62);
             this.button_Kup.Margin = new System.Windows.Forms.Padding(2);
             this.button_Kup.Name = "button_Kup";
-            this.button_Kup.Size = new System.Drawing.Size(220, 36);
+            this.button_Kup.Size = new System.Drawing.Size(180, 36);
             this.button_Kup.TabIndex = 8;
             this.button_Kup.Text = "Kup";
             this.button_Kup.UseVisualStyleBackColor = false;
@@ -199,6 +199,51 @@
             this.DataGridView_koszyk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridView_koszyk.Size = new System.Drawing.Size(458, 317);
             this.DataGridView_koszyk.TabIndex = 10;
+            // 
+            // NazwaProduktu
+            // 
+            this.NazwaProduktu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NazwaProduktu.FillWeight = 169.5438F;
+            this.NazwaProduktu.HeaderText = "NazwaProduktu";
+            this.NazwaProduktu.MinimumWidth = 6;
+            this.NazwaProduktu.Name = "NazwaProduktu";
+            this.NazwaProduktu.ReadOnly = true;
+            // 
+            // IloscJednostkowa
+            // 
+            this.IloscJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.IloscJednostkowa.FillWeight = 95.60748F;
+            this.IloscJednostkowa.HeaderText = "IloscJednostkowa";
+            this.IloscJednostkowa.MinimumWidth = 6;
+            this.IloscJednostkowa.Name = "IloscJednostkowa";
+            this.IloscJednostkowa.ReadOnly = true;
+            // 
+            // Column_Ilosc
+            // 
+            this.Column_Ilosc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column_Ilosc.FillWeight = 36.95675F;
+            this.Column_Ilosc.HeaderText = "Ilosc";
+            this.Column_Ilosc.MinimumWidth = 6;
+            this.Column_Ilosc.Name = "Column_Ilosc";
+            this.Column_Ilosc.ReadOnly = true;
+            // 
+            // CenaJednostkowa
+            // 
+            this.CenaJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CenaJednostkowa.FillWeight = 102.7578F;
+            this.CenaJednostkowa.HeaderText = "CenaJednostkowa";
+            this.CenaJednostkowa.MinimumWidth = 6;
+            this.CenaJednostkowa.Name = "CenaJednostkowa";
+            this.CenaJednostkowa.ReadOnly = true;
+            // 
+            // IDproduktu
+            // 
+            this.IDproduktu.HeaderText = "IDproduktu";
+            this.IDproduktu.MinimumWidth = 6;
+            this.IDproduktu.Name = "IDproduktu";
+            this.IDproduktu.ReadOnly = true;
+            this.IDproduktu.Visible = false;
+            this.IDproduktu.Width = 125;
             // 
             // panel2
             // 
@@ -277,51 +322,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // NazwaProduktu
-            // 
-            this.NazwaProduktu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NazwaProduktu.FillWeight = 169.5438F;
-            this.NazwaProduktu.HeaderText = "NazwaProduktu";
-            this.NazwaProduktu.MinimumWidth = 6;
-            this.NazwaProduktu.Name = "NazwaProduktu";
-            this.NazwaProduktu.ReadOnly = true;
-            // 
-            // IloscJednostkowa
-            // 
-            this.IloscJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IloscJednostkowa.FillWeight = 95.60748F;
-            this.IloscJednostkowa.HeaderText = "IloscJednostkowa";
-            this.IloscJednostkowa.MinimumWidth = 6;
-            this.IloscJednostkowa.Name = "IloscJednostkowa";
-            this.IloscJednostkowa.ReadOnly = true;
-            // 
-            // Column_Ilosc
-            // 
-            this.Column_Ilosc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column_Ilosc.FillWeight = 36.95675F;
-            this.Column_Ilosc.HeaderText = "Ilosc";
-            this.Column_Ilosc.MinimumWidth = 6;
-            this.Column_Ilosc.Name = "Column_Ilosc";
-            this.Column_Ilosc.ReadOnly = true;
-            // 
-            // CenaJednostkowa
-            // 
-            this.CenaJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CenaJednostkowa.FillWeight = 102.7578F;
-            this.CenaJednostkowa.HeaderText = "CenaJednostkowa";
-            this.CenaJednostkowa.MinimumWidth = 6;
-            this.CenaJednostkowa.Name = "CenaJednostkowa";
-            this.CenaJednostkowa.ReadOnly = true;
-            // 
-            // IDproduktu
-            // 
-            this.IDproduktu.HeaderText = "IDproduktu";
-            this.IDproduktu.MinimumWidth = 6;
-            this.IDproduktu.Name = "IDproduktu";
-            this.IDproduktu.ReadOnly = true;
-            this.IDproduktu.Visible = false;
-            this.IDproduktu.Width = 125;
-            // 
             // Koszyk
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +338,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Koszyk";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alledrogo";
             ((System.ComponentModel.ISupportInitialize)(this.zNorthwindDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produktyBindingSource)).EndInit();

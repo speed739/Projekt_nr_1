@@ -30,9 +30,9 @@ namespace Alledrogo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.button_zaloguj = new System.Windows.Forms.Button();
             this.lb_uzytkownik = new System.Windows.Forms.Label();
@@ -43,6 +43,10 @@ namespace Alledrogo
             this.produktyTableAdapter = new Alledrogo.ZNorthwindDataSetTableAdapters.ProduktyTableAdapter();
             this.tableAdapterManager = new Alledrogo.ZNorthwindDataSetTableAdapters.TableAdapterManager();
             this.produkty_DataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn_NazwaProduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn_IloscJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn_CenaJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDproduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produktyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,10 +70,7 @@ namespace Alledrogo
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button_Rejestracja = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn_NazwaProduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn_IloscJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn_CenaJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDproduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.zNorthwindDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produkty_DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produktyBindingSource)).BeginInit();
@@ -80,6 +81,7 @@ namespace Alledrogo
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // button_zaloguj
@@ -88,10 +90,10 @@ namespace Alledrogo
             this.button_zaloguj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_zaloguj.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_zaloguj.ForeColor = System.Drawing.Color.White;
-            this.button_zaloguj.Location = new System.Drawing.Point(0, 116);
+            this.button_zaloguj.Location = new System.Drawing.Point(21, 116);
             this.button_zaloguj.Margin = new System.Windows.Forms.Padding(2);
             this.button_zaloguj.Name = "button_zaloguj";
-            this.button_zaloguj.Size = new System.Drawing.Size(220, 37);
+            this.button_zaloguj.Size = new System.Drawing.Size(180, 37);
             this.button_zaloguj.TabIndex = 0;
             this.button_zaloguj.Text = "Zaloguj się";
             this.button_zaloguj.UseVisualStyleBackColor = false;
@@ -127,10 +129,10 @@ namespace Alledrogo
             this.Koszyk_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Koszyk_button.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.Koszyk_button.ForeColor = System.Drawing.Color.White;
-            this.Koszyk_button.Location = new System.Drawing.Point(0, 190);
+            this.Koszyk_button.Location = new System.Drawing.Point(21, 224);
             this.Koszyk_button.Margin = new System.Windows.Forms.Padding(2);
             this.Koszyk_button.Name = "Koszyk_button";
-            this.Koszyk_button.Size = new System.Drawing.Size(220, 37);
+            this.Koszyk_button.Size = new System.Drawing.Size(180, 37);
             this.Koszyk_button.TabIndex = 3;
             this.Koszyk_button.Text = "Koszyk";
             this.Koszyk_button.UseVisualStyleBackColor = false;
@@ -140,7 +142,7 @@ namespace Alledrogo
             // 
             this.koszyk_counter.AutoSize = true;
             this.koszyk_counter.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.koszyk_counter.Location = new System.Drawing.Point(98, 162);
+            this.koszyk_counter.Location = new System.Drawing.Point(98, 164);
             this.koszyk_counter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.koszyk_counter.Name = "koszyk_counter";
             this.koszyk_counter.Size = new System.Drawing.Size(21, 22);
@@ -175,8 +177,8 @@ namespace Alledrogo
             this.produkty_DataGridView.AllowUserToDeleteRows = false;
             this.produkty_DataGridView.AllowUserToResizeColumns = false;
             this.produkty_DataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSlateGray;
-            this.produkty_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSlateGray;
+            this.produkty_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.produkty_DataGridView.AutoGenerateColumns = false;
             this.produkty_DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.produkty_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -186,31 +188,31 @@ namespace Alledrogo
             this.dataGridViewTextBoxColumn_CenaJednostkowa,
             this.IDproduktu});
             this.produkty_DataGridView.DataSource = this.produktyBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = null;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.produkty_DataGridView.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.produkty_DataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.produkty_DataGridView.GridColor = System.Drawing.Color.Salmon;
             this.produkty_DataGridView.Location = new System.Drawing.Point(142, 205);
             this.produkty_DataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.produkty_DataGridView.Name = "produkty_DataGridView";
             this.produkty_DataGridView.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Format = "N2";
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.produkty_DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.produkty_DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.produkty_DataGridView.RowHeadersVisible = false;
             this.produkty_DataGridView.RowHeadersWidth = 51;
             this.produkty_DataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gray;
@@ -218,6 +220,46 @@ namespace Alledrogo
             this.produkty_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.produkty_DataGridView.Size = new System.Drawing.Size(398, 348);
             this.produkty_DataGridView.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn_NazwaProduktu
+            // 
+            this.dataGridViewTextBoxColumn_NazwaProduktu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn_NazwaProduktu.DataPropertyName = "NazwaProduktu";
+            this.dataGridViewTextBoxColumn_NazwaProduktu.FillWeight = 130.4849F;
+            this.dataGridViewTextBoxColumn_NazwaProduktu.HeaderText = "NazwaProduktu";
+            this.dataGridViewTextBoxColumn_NazwaProduktu.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn_NazwaProduktu.Name = "dataGridViewTextBoxColumn_NazwaProduktu";
+            this.dataGridViewTextBoxColumn_NazwaProduktu.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn_IloscJednostkowa
+            // 
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.DataPropertyName = "IlośćJednostkowa";
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.FillWeight = 116.5739F;
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.HeaderText = "Ilość w opakowaniu";
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.Name = "dataGridViewTextBoxColumn_IloscJednostkowa";
+            this.dataGridViewTextBoxColumn_IloscJednostkowa.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn_CenaJednostkowa
+            // 
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.DataPropertyName = "CenaJednostkowa";
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.FillWeight = 52.94118F;
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.HeaderText = "Cena";
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.Name = "dataGridViewTextBoxColumn_CenaJednostkowa";
+            this.dataGridViewTextBoxColumn_CenaJednostkowa.ReadOnly = true;
+            // 
+            // IDproduktu
+            // 
+            this.IDproduktu.DataPropertyName = "IDproduktu";
+            this.IDproduktu.HeaderText = "IDproduktu";
+            this.IDproduktu.MinimumWidth = 6;
+            this.IDproduktu.Name = "IDproduktu";
+            this.IDproduktu.ReadOnly = true;
+            this.IDproduktu.Visible = false;
+            this.IDproduktu.Width = 125;
             // 
             // produktyBindingSource
             // 
@@ -284,10 +326,10 @@ namespace Alledrogo
             this.button_dodaj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_dodaj.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_dodaj.ForeColor = System.Drawing.Color.White;
-            this.button_dodaj.Location = new System.Drawing.Point(0, 227);
+            this.button_dodaj.Location = new System.Drawing.Point(21, 261);
             this.button_dodaj.Margin = new System.Windows.Forms.Padding(2);
             this.button_dodaj.Name = "button_dodaj";
-            this.button_dodaj.Size = new System.Drawing.Size(220, 37);
+            this.button_dodaj.Size = new System.Drawing.Size(180, 37);
             this.button_dodaj.TabIndex = 13;
             this.button_dodaj.Text = "Dodaj";
             this.button_dodaj.UseVisualStyleBackColor = false;
@@ -299,10 +341,10 @@ namespace Alledrogo
             this.button_wyloguj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_wyloguj.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_wyloguj.ForeColor = System.Drawing.Color.White;
-            this.button_wyloguj.Location = new System.Drawing.Point(0, 116);
+            this.button_wyloguj.Location = new System.Drawing.Point(21, 116);
             this.button_wyloguj.Margin = new System.Windows.Forms.Padding(2);
             this.button_wyloguj.Name = "button_wyloguj";
-            this.button_wyloguj.Size = new System.Drawing.Size(220, 37);
+            this.button_wyloguj.Size = new System.Drawing.Size(180, 37);
             this.button_wyloguj.TabIndex = 20;
             this.button_wyloguj.Text = "Wyloguj";
             this.button_wyloguj.UseVisualStyleBackColor = false;
@@ -401,6 +443,7 @@ namespace Alledrogo
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(92)))), ((int)(((byte)(8)))));
+            this.panel2.Controls.Add(this.pictureBox6);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -454,10 +497,10 @@ namespace Alledrogo
             this.button_Rejestracja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_Rejestracja.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_Rejestracja.ForeColor = System.Drawing.Color.White;
-            this.button_Rejestracja.Location = new System.Drawing.Point(0, 79);
+            this.button_Rejestracja.Location = new System.Drawing.Point(21, 79);
             this.button_Rejestracja.Margin = new System.Windows.Forms.Padding(2);
             this.button_Rejestracja.Name = "button_Rejestracja";
-            this.button_Rejestracja.Size = new System.Drawing.Size(220, 37);
+            this.button_Rejestracja.Size = new System.Drawing.Size(180, 37);
             this.button_Rejestracja.TabIndex = 22;
             this.button_Rejestracja.Text = "Rejestracja";
             this.button_Rejestracja.UseVisualStyleBackColor = false;
@@ -476,45 +519,15 @@ namespace Alledrogo
             this.label1.TabIndex = 21;
             this.label1.Text = "Użytkownik :";
             // 
-            // dataGridViewTextBoxColumn_NazwaProduktu
+            // pictureBox6
             // 
-            this.dataGridViewTextBoxColumn_NazwaProduktu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn_NazwaProduktu.DataPropertyName = "NazwaProduktu";
-            this.dataGridViewTextBoxColumn_NazwaProduktu.FillWeight = 130.4849F;
-            this.dataGridViewTextBoxColumn_NazwaProduktu.HeaderText = "NazwaProduktu";
-            this.dataGridViewTextBoxColumn_NazwaProduktu.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn_NazwaProduktu.Name = "dataGridViewTextBoxColumn_NazwaProduktu";
-            this.dataGridViewTextBoxColumn_NazwaProduktu.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn_IloscJednostkowa
-            // 
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.DataPropertyName = "IlośćJednostkowa";
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.FillWeight = 116.5739F;
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.HeaderText = "Ilość w opakowaniu";
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.Name = "dataGridViewTextBoxColumn_IloscJednostkowa";
-            this.dataGridViewTextBoxColumn_IloscJednostkowa.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn_CenaJednostkowa
-            // 
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.DataPropertyName = "CenaJednostkowa";
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.FillWeight = 52.94118F;
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.HeaderText = "Cena";
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.Name = "dataGridViewTextBoxColumn_CenaJednostkowa";
-            this.dataGridViewTextBoxColumn_CenaJednostkowa.ReadOnly = true;
-            // 
-            // IDproduktu
-            // 
-            this.IDproduktu.DataPropertyName = "IDproduktu";
-            this.IDproduktu.HeaderText = "IDproduktu";
-            this.IDproduktu.MinimumWidth = 6;
-            this.IDproduktu.Name = "IDproduktu";
-            this.IDproduktu.ReadOnly = true;
-            this.IDproduktu.Visible = false;
-            this.IDproduktu.Width = 125;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(92, 187);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox6.TabIndex = 26;
+            this.pictureBox6.TabStop = false;
             // 
             // MainForm
             // 
@@ -550,6 +563,7 @@ namespace Alledrogo
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -593,6 +607,7 @@ namespace Alledrogo
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn_IloscJednostkowa;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn_CenaJednostkowa;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDproduktu;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }
 

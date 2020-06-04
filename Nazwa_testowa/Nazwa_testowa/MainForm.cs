@@ -35,7 +35,10 @@ namespace Alledrogo
         {
             if (Global_variable.User_status == true)
             {
+                
+                Visible = false;
                 Basket.ShowDialog();
+                Visible = true;
                 koszyk_counter.Text = Global_variable.Change_counter.ToString();
             }
             else
@@ -50,7 +53,9 @@ namespace Alledrogo
                         lb_user_status.Text = Global_variable.IDklienta;
                         button_zaloguj.Visible = false;
                         button_wyloguj.Visible = true;
+                        Visible = false;
                         Basket.ShowDialog();
+                        Visible = true;
                         koszyk_counter.Text = Global_variable.Change_counter.ToString();
                     }
                 }
