@@ -220,6 +220,7 @@ namespace Alledrogo
             this.produkty_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.produkty_DataGridView.Size = new System.Drawing.Size(398, 348);
             this.produkty_DataGridView.TabIndex = 6;
+            this.produkty_DataGridView.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.produkty_DataGridView_MouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn_NazwaProduktu
             // 

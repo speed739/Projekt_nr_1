@@ -151,5 +151,9 @@ namespace Alledrogo
             Rejestracja registry = new Rejestracja();
             registry.ShowDialog();
         }
+        private void produkty_DataGridView_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Button_dodaj_Click(sender, e);
+        }
     }
 }
