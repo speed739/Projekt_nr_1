@@ -30,9 +30,9 @@ namespace Alledrogo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.button_zaloguj = new System.Windows.Forms.Button();
             this.lb_uzytkownik = new System.Windows.Forms.Label();
@@ -129,7 +129,7 @@ namespace Alledrogo
             this.Koszyk_button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Koszyk_button.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.Koszyk_button.ForeColor = System.Drawing.Color.White;
-            this.Koszyk_button.Location = new System.Drawing.Point(21, 231);
+            this.Koszyk_button.Location = new System.Drawing.Point(21, 224);
             this.Koszyk_button.Margin = new System.Windows.Forms.Padding(2);
             this.Koszyk_button.Name = "Koszyk_button";
             this.Koszyk_button.Size = new System.Drawing.Size(180, 37);
@@ -142,7 +142,7 @@ namespace Alledrogo
             // 
             this.koszyk_counter.AutoSize = true;
             this.koszyk_counter.Font = new System.Drawing.Font("Century Gothic", 13.25F);
-            this.koszyk_counter.Location = new System.Drawing.Point(97, 167);
+            this.koszyk_counter.Location = new System.Drawing.Point(97, 160);
             this.koszyk_counter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.koszyk_counter.Name = "koszyk_counter";
             this.koszyk_counter.Size = new System.Drawing.Size(20, 21);
@@ -177,8 +177,8 @@ namespace Alledrogo
             this.produkty_DataGridView.AllowUserToDeleteRows = false;
             this.produkty_DataGridView.AllowUserToResizeColumns = false;
             this.produkty_DataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSlateGray;
-            this.produkty_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSlateGray;
+            this.produkty_DataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.produkty_DataGridView.AutoGenerateColumns = false;
             this.produkty_DataGridView.BackgroundColor = System.Drawing.Color.White;
             this.produkty_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -188,31 +188,31 @@ namespace Alledrogo
             this.dataGridViewTextBoxColumn_CenaJednostkowa,
             this.IDproduktu});
             this.produkty_DataGridView.DataSource = this.produktyBindingSource;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Desktop;
-            dataGridViewCellStyle11.Format = "N2";
-            dataGridViewCellStyle11.NullValue = null;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.produkty_DataGridView.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.produkty_DataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.produkty_DataGridView.GridColor = System.Drawing.Color.Salmon;
             this.produkty_DataGridView.Location = new System.Drawing.Point(142, 205);
             this.produkty_DataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.produkty_DataGridView.Name = "produkty_DataGridView";
             this.produkty_DataGridView.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Format = "N2";
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.produkty_DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.produkty_DataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.produkty_DataGridView.RowHeadersVisible = false;
             this.produkty_DataGridView.RowHeadersWidth = 51;
             this.produkty_DataGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Gray;
@@ -326,7 +326,7 @@ namespace Alledrogo
             this.button_dodaj.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_dodaj.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
             this.button_dodaj.ForeColor = System.Drawing.Color.White;
-            this.button_dodaj.Location = new System.Drawing.Point(21, 268);
+            this.button_dodaj.Location = new System.Drawing.Point(21, 261);
             this.button_dodaj.Margin = new System.Windows.Forms.Padding(2);
             this.button_dodaj.Name = "button_dodaj";
             this.button_dodaj.Size = new System.Drawing.Size(180, 37);
@@ -464,7 +464,7 @@ namespace Alledrogo
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(89, 187);
+            this.pictureBox6.Location = new System.Drawing.Point(89, 180);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(42, 42);

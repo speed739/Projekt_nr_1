@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Koszyk));
             this.textBox_do_zaplaty = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,6 +51,8 @@
             this.CenaJednostkowa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDproduktu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button_Odejmij = new System.Windows.Forms.Button();
+            this.button_powrot = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -73,7 +76,7 @@
             // textBox_do_zaplaty
             // 
             this.textBox_do_zaplaty.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox_do_zaplaty.Location = new System.Drawing.Point(487, 505);
+            this.textBox_do_zaplaty.Location = new System.Drawing.Point(474, 505);
             this.textBox_do_zaplaty.Margin = new System.Windows.Forms.Padding(2);
             this.textBox_do_zaplaty.Name = "textBox_do_zaplaty";
             this.textBox_do_zaplaty.ReadOnly = true;
@@ -85,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(388, 512);
+            this.label1.Location = new System.Drawing.Point(375, 512);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 20);
@@ -103,7 +106,7 @@
             this.button_usun.Name = "button_usun";
             this.button_usun.Size = new System.Drawing.Size(180, 36);
             this.button_usun.TabIndex = 5;
-            this.button_usun.Text = "Usuń";
+            this.button_usun.Text = "Usuń z listy";
             this.button_usun.UseVisualStyleBackColor = false;
             this.button_usun.Click += new System.EventHandler(this.button_usun_Click);
             // 
@@ -112,7 +115,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(239, 137);
+            this.label2.Location = new System.Drawing.Point(237, 137);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(213, 36);
@@ -164,19 +167,19 @@
             this.DataGridView_koszyk.AllowUserToDeleteRows = false;
             this.DataGridView_koszyk.AllowUserToResizeColumns = false;
             this.DataGridView_koszyk.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.NullValue = null;
-            this.DataGridView_koszyk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.NullValue = null;
+            this.DataGridView_koszyk.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridView_koszyk.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridView_koszyk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Format = "N2";
+            dataGridViewCellStyle6.NullValue = null;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridView_koszyk.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridView_koszyk.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridView_koszyk.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NazwaProduktu,
@@ -185,25 +188,25 @@
             this.CenaJednostkowa,
             this.IDproduktu});
             this.DataGridView_koszyk.GridColor = System.Drawing.Color.Salmon;
-            this.DataGridView_koszyk.Location = new System.Drawing.Point(118, 175);
+            this.DataGridView_koszyk.Location = new System.Drawing.Point(127, 175);
             this.DataGridView_koszyk.Margin = new System.Windows.Forms.Padding(2);
             this.DataGridView_koszyk.Name = "DataGridView_koszyk";
             this.DataGridView_koszyk.ReadOnly = true;
             this.DataGridView_koszyk.RowHeadersVisible = false;
             this.DataGridView_koszyk.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.DataGridView_koszyk.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.DataGridView_koszyk.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridView_koszyk.RowTemplate.Height = 24;
             this.DataGridView_koszyk.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridView_koszyk.Size = new System.Drawing.Size(458, 317);
+            this.DataGridView_koszyk.Size = new System.Drawing.Size(436, 317);
             this.DataGridView_koszyk.TabIndex = 10;
             // 
             // NazwaProduktu
             // 
             this.NazwaProduktu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NazwaProduktu.FillWeight = 169.5438F;
+            this.NazwaProduktu.FillWeight = 181.0774F;
             this.NazwaProduktu.HeaderText = "NazwaProduktu";
             this.NazwaProduktu.MinimumWidth = 6;
             this.NazwaProduktu.Name = "NazwaProduktu";
@@ -212,7 +215,7 @@
             // IloscJednostkowa
             // 
             this.IloscJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.IloscJednostkowa.FillWeight = 95.60748F;
+            this.IloscJednostkowa.FillWeight = 102.1114F;
             this.IloscJednostkowa.HeaderText = "IloscJednostkowa";
             this.IloscJednostkowa.MinimumWidth = 6;
             this.IloscJednostkowa.Name = "IloscJednostkowa";
@@ -221,7 +224,7 @@
             // Column_Ilosc
             // 
             this.Column_Ilosc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column_Ilosc.FillWeight = 36.95675F;
+            this.Column_Ilosc.FillWeight = 39.47081F;
             this.Column_Ilosc.HeaderText = "Ilosc";
             this.Column_Ilosc.MinimumWidth = 6;
             this.Column_Ilosc.Name = "Column_Ilosc";
@@ -230,8 +233,11 @@
             // CenaJednostkowa
             // 
             this.CenaJednostkowa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CenaJednostkowa.FillWeight = 102.7578F;
-            this.CenaJednostkowa.HeaderText = "CenaJednostkowa";
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = "0";
+            this.CenaJednostkowa.DefaultCellStyle = dataGridViewCellStyle7;
+            this.CenaJednostkowa.FillWeight = 82.20626F;
+            this.CenaJednostkowa.HeaderText = "Cena";
             this.CenaJednostkowa.MinimumWidth = 6;
             this.CenaJednostkowa.Name = "CenaJednostkowa";
             this.CenaJednostkowa.ReadOnly = true;
@@ -248,6 +254,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(92)))), ((int)(((byte)(8)))));
+            this.panel2.Controls.Add(this.button_Odejmij);
+            this.panel2.Controls.Add(this.button_powrot);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -258,6 +266,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 428);
             this.panel2.TabIndex = 23;
+            // 
+            // button_Odejmij
+            // 
+            this.button_Odejmij.BackColor = System.Drawing.Color.Gray;
+            this.button_Odejmij.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_Odejmij.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
+            this.button_Odejmij.ForeColor = System.Drawing.Color.White;
+            this.button_Odejmij.Location = new System.Drawing.Point(21, 134);
+            this.button_Odejmij.Margin = new System.Windows.Forms.Padding(2);
+            this.button_Odejmij.Name = "button_Odejmij";
+            this.button_Odejmij.Size = new System.Drawing.Size(180, 36);
+            this.button_Odejmij.TabIndex = 30;
+            this.button_Odejmij.Text = "Odejmij sztukę";
+            this.button_Odejmij.UseVisualStyleBackColor = false;
+            this.button_Odejmij.Click += new System.EventHandler(this.button_Odejmij_Click);
+            // 
+            // button_powrot
+            // 
+            this.button_powrot.BackColor = System.Drawing.Color.Gray;
+            this.button_powrot.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button_powrot.Font = new System.Drawing.Font("Century Gothic", 12.25F, System.Drawing.FontStyle.Bold);
+            this.button_powrot.ForeColor = System.Drawing.Color.White;
+            this.button_powrot.Location = new System.Drawing.Point(21, 170);
+            this.button_powrot.Margin = new System.Windows.Forms.Padding(2);
+            this.button_powrot.Name = "button_powrot";
+            this.button_powrot.Size = new System.Drawing.Size(180, 36);
+            this.button_powrot.TabIndex = 29;
+            this.button_powrot.Text = "Powrót";
+            this.button_powrot.UseVisualStyleBackColor = false;
+            this.button_powrot.Click += new System.EventHandler(this.button_powrot_Click);
             // 
             // pictureBox5
             // 
@@ -376,10 +414,12 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button button_powrot;
         private System.Windows.Forms.DataGridViewTextBoxColumn NazwaProduktu;
         private System.Windows.Forms.DataGridViewTextBoxColumn IloscJednostkowa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Ilosc;
         private System.Windows.Forms.DataGridViewTextBoxColumn CenaJednostkowa;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDproduktu;
+        private System.Windows.Forms.Button button_Odejmij;
     }
 }

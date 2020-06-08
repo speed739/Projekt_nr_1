@@ -118,9 +118,9 @@ namespace Alledrogo
         private void Cleaning_after_order()
         {
             SaveBill_to_PDF();
-            if(Save_success == true)
+            if (Save_success == true)
             {
-             DialogResult dialog = MessageBox.Show("Dokonanano zakupu\nRachunek został wyeksportowany do pliku PDF\nChcesz dalej kontynuować zakupy ?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult dialog = MessageBox.Show("Dokonanano zakupu\nRachunek został wyeksportowany do pliku PDF\nChcesz dalej kontynuować zakupy ?", "Informacja", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dialog == DialogResult.Yes)
                 {
                     foreach (DataGridViewRow item in DataGridView_koszyk.Rows)
@@ -138,10 +138,10 @@ namespace Alledrogo
                     Application.Exit();
                 }
             }
-            if(Save_success == false)
+            if (Save_success == false)
             {
-                var result = MessageBox.Show("Nie wybrano miejsca zapisu rachunku\nChcesz ponowić próbę ?","Alledrogo",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
-                if(result == DialogResult.Yes)
+                var result = MessageBox.Show("Nie wybrano miejsca zapisu rachunku\nChcesz ponowić próbę ?", "Alledrogo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
                 {
                     SaveBill_to_PDF();
                 }
@@ -155,7 +155,7 @@ namespace Alledrogo
             sfd.FileName = "Bill.pdf";
             bool fileError = false;
             MessageBox.Show("Wybierz miejsce na dysku gdzie chcesz zapisać swój rachunek", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 if (File.Exists(sfd.FileName))
@@ -214,6 +214,38 @@ namespace Alledrogo
                     }
                 }
             }
+        }
+
+        private void button_powrot_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button_Odejmij_Click(object sender, EventArgs e)
+        {
+            if (DataGridView_koszyk.RowCount > 0)
+            {
+                foreach (DataGridViewRow item in DataGridView_koszyk.SelectedRows)
+                {
+                    if (Convert.ToInt32(item.Cells[2].Value) > 0)
+                    {
+                        --Global_variable.Change_counter;
+                        Global_variable.Bill -= Convert.ToDouble(item.Cells[3].Value);
+                        item.Cells[2].Value = Convert.ToInt32(item.Cells[2].Value) - 1;
+                        textBox_do_zaplaty.Text = Global_variable.Bill.ToString("0.00" + " zl");
+                        
+                        if (Convert.ToInt32(item.Cells[2].Value) == 0)
+                        {
+                            DataGridView_koszyk.Rows.RemoveAt(item.Index);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Brak obiektów do usunięcia", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
     }
 }
